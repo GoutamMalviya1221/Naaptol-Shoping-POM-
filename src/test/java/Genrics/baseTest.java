@@ -59,6 +59,6 @@ public class baseTest{
 	
 	@AfterClass
 	public void teardown() {
-		//driver.close();
+		driver.close();
 	}
 	}
