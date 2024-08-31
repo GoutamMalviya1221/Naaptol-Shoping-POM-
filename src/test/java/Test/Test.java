@@ -31,6 +31,16 @@ public class Test extends baseTest {
 		
 		FileUtils.copyFile(image, img); 
 	}
+
+	@BeforeClass
+	public void reporting() {
+		
+		 report = new ExtentReports("C:\\Users\\lenovo\\Documents\\workspace-spring-tool-suite-4-4.23.1.RELEASE\\NaapTol_CW_POM\\report.xml");
+		
+		 test = report.startTest("Naaptol");
+	}
+	
+	
 	
 	@org.testng.annotations.Test(priority = 0)
 	public void Homepage() throws IOException {
@@ -284,5 +294,11 @@ public class Test extends baseTest {
 		driver.switchTo().window(parent3);
 		capture(driver, 8);
 
+	}
+	@AfterClass
+	public void end() {
+		
+		report.flush();
+		report.endTest(test);
 	}
 }
