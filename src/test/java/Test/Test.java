@@ -139,7 +139,7 @@ public class Test extends baseTest {
 			}
 		}
 		
-		String Display = driver.findElement(By.xpath("//*[@class='button_head']")).getText();
+		String Display = driver.findElement(By.xpath("//*[@id=\"productPriceDisplay\"]/span")).getText();
 		sA.assertEquals(Display, "No offer for sale on Naaptol.");
 		sA.assertAll();
 		driver.close();
@@ -180,7 +180,7 @@ public class Test extends baseTest {
 			}
 		}
 		
-		String Display = driver.findElement(By.xpath("//*[@class='button_head']")).getText();
+		String Display = driver.findElement(By.xpath("//*[@id=\"productPriceDisplay\"]/span")).getText();
 		sA.assertEquals(Display, "No offer for sale on Naaptol.");
 		sA.assertAll();
 		driver.close();
