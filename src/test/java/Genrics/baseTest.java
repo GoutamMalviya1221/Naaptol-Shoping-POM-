@@ -36,11 +36,7 @@ public class baseTest{
 	public void setup() throws IOException {
 		
 		driver = new ChromeDriver();
-		Properties properties = new Properties();
-		FileInputStream file = new FileInputStream("C:\\Users\\lenovo\\Documents\\workspace-spring-tool-suite-4-4.23.1.RELEASE\\NaapTol_CW_POM\\src\\test\\resources\\config.properties");
-		properties.load(file);
-		url = properties.getProperty("url");
-		driver.get(url);
+		driver.get("https://www.naaptol.com/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
